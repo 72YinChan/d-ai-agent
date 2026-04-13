@@ -43,6 +43,7 @@ docs = loader.load()
 print(f"{docs}\n文档已加载完成")
 
 # 2. 分割
+# RecursiveCharacterTextSplitter 按 ["\n\n", "\n", " "] 优先级智能分割
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=250,    # 设定的 chunk 块大小（字符数）
     chunk_overlap=40,  # 设定的重叠大小（字符数）

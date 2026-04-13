@@ -57,14 +57,14 @@ docs = loader.load()
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=250, chunk_overlap=40)
 splits = text_splitter.split_documents(docs)
 embeddings_model = get_embeddings("BAAI/bge-small-zh-v1.5")
-db = FAISS.from_documents(splits, embeddings_model)
+db = FAISS.from_documents(splits, embeddings_model)  # 构建向量索引库
 print("--- 模块A（Indexing）完成 ---\n")
 
 
 # -- 模块B（在线运行：Online R-A-G Flow） ---
 print("--- 模块B R-A-G正在构建 ---\n")
 # 1. R（Retrieval - 检索）
-retrieve = db.as_retriever(search_kwarg={"k": 1})  # 只返回最相关的 1 个
+retrieve = db.as_retriever(search_kwarg={"k": 1})  # 作为检索器，只返回最相关的 1 个
 
 # 2. A（Augmented - 增强）
 system = """\

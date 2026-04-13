@@ -1,6 +1,7 @@
 .idea
 models
 faiss_index
+chroma_db_war_and_peace_bge_small_en_v1.5
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -10,7 +10,7 @@ print("Embedding 模型加载完毕")
 
 # 演示：将文本转换为向量
 text = "模块05的目标是什么"
-query_embedding = embeddings_model.embed_query(text)
+query_embedding = embeddings_model.embed_query(text)  # 将文本转换为向量
 
 # 验证：向量存在，而且有具体数值
 print(f"文本: {text}")
