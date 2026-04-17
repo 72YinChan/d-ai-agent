@@ -1,3 +1,16 @@
+"""
+引入精排序器
+
+在召回结果上应用 Reranker 模型，提升上下文相关性。
+✅ 掌握点：
+- 通过根目录 embeddings.py 模块的 get_embeddings() 函数加载向量化模型。
+- 使用 BAAI/bge-reranker-base Cross-Encoder 对检索结果进行重排序。
+- 通过 ContextualCompressionRetriever 和 CrossEncoderReranker 实现检索增强。
+- 理解k与top_n的作用
+- 保留 Top-6 最相关文档，过滤语义噪声。
+依赖前提：
+- 必须存在 chroma_db_war_and_peace_bge_small_en_v1.5 目录。
+"""
 from pathlib import Path
 import os
 

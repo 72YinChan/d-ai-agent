@@ -1,3 +1,13 @@
+"""
+综合实践
+
+整合所有组件，搭建一个带记忆的 AI 对话机器人。
+
+✅ 掌握点：
+- 完整流程串联
+- 实际运行体验
+- 可直接扩展为 Web 应用
+"""
 import os
 
 from dotenv import load_dotenv

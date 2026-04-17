@@ -1,3 +1,13 @@
+"""
+链式调用
+
+将 Prompt + LLM + Parser 组合成 Chain。
+
+✅ 掌握点：
+- 使用 | 操作符连接组件
+- 创建可复用的处理流程
+- 输出解析为字符串
+"""
 import os
 
 from dotenv import load_dotenv

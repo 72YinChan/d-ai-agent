@@ -1,3 +1,16 @@
+"""
+状态机 + LangSmith 追踪
+
+在 1. 的基础上启用 LangSmith，实现执行过程可视化追踪。
+
+✅ 掌握点：
+- 设置环境变量：LANGCHAIN_TRACING_V2=true、LANGCHAIN_PROJECT="my_demo"。
+- 无需修改节点逻辑，自动上报每一步状态变更。
+- 在 LangSmith UI 查看执行轨迹。
+注意：
+- 仍是一个纯状态机示例（count +1 +1），非对话 Agent。
+- 用于验证 LangSmith 集成是否生效。
+"""
 from typing import TypedDict
 
 from dotenv import load_dotenv

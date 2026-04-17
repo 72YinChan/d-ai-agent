@@ -1,3 +1,16 @@
+"""
+RAG 工具化封装
+
+将 RAG 链封装为 LangChain @tool，供 Agent 调用。
+
+✅ 掌握点：
+- 通过根目录 embeddings.py 模块的 get_embeddings() 函数加载向量化模型。
+- 在启动时一次性构建 RAG 链（避免每次调用重复加载模型/数据库）。
+- 使用 @tool 装饰器注册 search_war_and_peace(query) 函数。
+- 支持与其他工具（如 get_weather）并列使用。
+依赖前提：
+- 必须存在 chroma_db_war_and_peace_bge_small_en_v1.5 目录。
+"""
 from pathlib import Path
 import os
 

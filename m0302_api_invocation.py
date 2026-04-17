@@ -1,3 +1,10 @@
+"""
+API 调用
+
+接入一个真实 API，重点掌握：
+- ✅ 如何根据 API 文档封装工具
+- ✅ 让 AI 真正“动手”做事
+"""
 import os
 
 from dotenv import load_dotenv

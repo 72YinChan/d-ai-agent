@@ -1,3 +1,12 @@
+"""
+模型调用
+
+封装 LLM 实例，实现标准调用流程。
+
+✅ 掌握点：
+- 如何初始化 ChatOpenAI 或 DeepSeek
+- 设置 API Key 和 base_url
+"""
 import os
 
 from dotenv import load_dotenv

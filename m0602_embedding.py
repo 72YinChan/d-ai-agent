@@ -1,3 +1,13 @@
+"""
+文本向量化
+
+演示如何加载本地 Embedding 模型，并将任意文本（知识卡片）转换为"语义向量"。
+
+✅ 掌握点：
+- 使用 HuggingFaceEmbeddings 加载开源本地模型（如 BAAI/bge-small-zh-v1.5）。
+- 理解 Embedding（向量化）是 RAG 的"语义标签"，用于实现"语义搜索"。
+- 如何调用 embed_query 将文本转换为向量（一串数字）。
+"""
 from embeddings import get_embeddings
 
 

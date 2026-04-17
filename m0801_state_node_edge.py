@@ -1,3 +1,19 @@
+"""
+LangGraph 最小状态机
+
+演示 LangGraph 最基础的三要素：State（状态）、Node（节点）、Edge（边）。
+
+✅ 掌握点：
+- 定义 TypedDict 作为状态（如 {"count": int}）。
+- 编写节点函数（node_a, node_b）处理状态并返回更新。
+- 使用 add_edge(START, "A")、add_edge("A", "B") 构建线性流程。
+- 调用 app.get_graph().draw_mermaid_png() 生成可视化流程图。
+输出：
+- 控制台打印状态变化过程。
+- 生成 workflow.png 流程图。
+
+💡 此脚本不涉及 LLM 或对话，仅用于理解 LangGraph 底层机制。
+"""
 from typing import TypedDict
 
 from langgraph.graph import StateGraph, END, START

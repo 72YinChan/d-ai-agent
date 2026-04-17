@@ -1,3 +1,13 @@
+"""
+SQL 专用 Agent
+
+一键构建自然语言查询数据库的智能体。
+
+✅ 掌握点：
+- 使用 create_sql_agent 快速接入 SQLite 数据库
+- 自动分析表结构、生成 SQL 并执行
+- 无需手动定义工具，开箱即用
+"""
 import os
 from pathlib import Path
 import sqlite3

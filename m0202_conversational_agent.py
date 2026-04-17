@@ -1,3 +1,17 @@
+"""
+多轮问答 Agent
+
+整合了 LLM + Prompt + Memory，实现有记忆的对话。
+
+🔧 使用提示：
+想换 AI 人设或初始提问？
+👉 直接修改 messages 中的 content 即可。
+
+✅ 掌握点：
+- 多轮对话如何保持上下文
+- Prompt 结构设计
+- 记忆模块（Memory）的基本用法
+"""
 import os
 
 from dotenv import load_dotenv

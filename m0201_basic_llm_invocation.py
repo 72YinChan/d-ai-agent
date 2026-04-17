@@ -1,3 +1,14 @@
+"""
+LLM 模型调用
+
+使用 DeepSeek 官方推荐的调用方式，
+这是后续所有 API 调用的通用结构，可直接复用。
+
+✅ 掌握点：
+- 如何初始化 LLM 实例
+- 标准的 API 调用格式
+- 快速切换模型和参数
+"""
 import os
 
 from dotenv import load_dotenv

@@ -1,3 +1,13 @@
+"""
+提示词构建
+
+使用 ChatPromptTemplate 构建可复用的 Prompt 模板。
+
+✅ 掌握点：
+- 系统提示 + 历史消息 + 用户输入
+- 使用 {input} 占位符
+- 多轮对话的基础结构
+"""
 from langchain_core.prompts import ChatPromptTemplate
 
 

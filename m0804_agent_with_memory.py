@@ -1,3 +1,18 @@
+"""
+完整 Agent：带记忆 + 系统提示
+
+在 3. 基础上升级为生产级 Agent 范式。
+
+✅ 掌握点：
+- 启用 MemorySaver() 实现跨轮次记忆（checkpointer=MemorySaver()）。
+- 通过 config={"configurable": {"thread_id": "user123"}} 绑定会话。
+- 在 call_model 中动态注入 SystemMessage(content=sys_prompt)，但不写入 state，避免污染历史。
+- 保留 LangSmith 追踪能力。
+效果：
+- 支持连续对话（如“查北京天气” → “那上海呢？”）。
+- 系统指令始终生效，但不会出现在消息历史中。
+- 全流程可追踪、可调试。
+"""
 import os
 
 from dotenv import load_dotenv

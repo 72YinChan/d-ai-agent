@@ -1,3 +1,13 @@
+"""
+记忆功能
+
+添加会话记忆，实现多轮对话。
+
+✅ 掌握点：
+- 使用 ChatMessageHistory 存储历史
+- RunnableWithMessageHistory 包装 Chain
+- 保持上下文连贯性
+"""
 import os
 
 from dotenv import load_dotenv

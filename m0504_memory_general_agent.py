@@ -1,3 +1,13 @@
+"""
+带记忆的 Agent
+
+将 Agent 与对话历史结合，实现多轮上下文感知。
+
+✅ 掌握点：
+- 在 Prompt 中加入 MessagesPlaceholder("history")
+- 使用 RunnableWithMessageHistory 包装 AgentExecutor
+- 实现“记住用户身份”、“持续追问”的真实对话体验
+"""
 import os
 
 from dotenv import load_dotenv

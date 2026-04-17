@@ -1,3 +1,20 @@
+"""
+首个 ReAct Agent：无记忆
+
+构建第一个真正意义上的 LangGraph Agent：支持工具调用与条件循环。
+
+✅ 掌握点：
+- 使用 MessagesState 管理对话历史。
+- 定义 @tool def get_weather(location) 并绑定到 LLM。
+- 实现 should_continue 函数判断是否需调用工具。
+- 构建 agent → (条件) → tools → agent 的 ReAct 循环。
+- 通过 app.invoke({"messages": [...]}) 触发执行。
+效果：
+- 输入“北京天气如何？” → 调用工具 → 返回天气。
+- 输入“你好” → 直接回答，不触发工具。
+局限：
+- 无记忆：每次 invoke 都是独立会话。
+"""
 import os
 
 from dotenv import load_dotenv

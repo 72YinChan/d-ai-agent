@@ -1,3 +1,19 @@
+"""
+构建 Chroma 向量数据库
+
+将 war_and_peace.txt 加载、分块、向量化，并存入 Chroma 持久化向量数据库。
+
+✅ 掌握点：
+- 使用 RecursiveCharacterTextSplitter 分割长文本（chunk_size=500, overlap=75）。
+- 通过根目录 embeddings.py 模块的 get_embeddings() 函数获取向量化模型（默认使用 BAAI/bge-small-en-v1.5）。
+- 通过 Chroma(persist_directory=...) 创建可持久化、支持增删改的向量库。
+- 自动分批插入（每批 ≤5000 条），规避 Chroma 单次写入上限限制。
+注意事项：
+- 该脚本仅需运行一次，成功后会生成目录 chroma_db_war_and_peace_bge_small_en_v1.5。
+- 首次运行需下载 Embedding 模型（约2分钟）+ 向量化全文（约3分钟），总耗时较长。
+- ✅ 项目已附带预建好的 chroma_db_war_and_peace_bge_small_en_v1.5 文件夹，推荐直接使用，无需重复运行此脚本。
+- 如需重建，请先手动删除该文件夹，再执行。
+"""
 from pathlib import Path
 
 from langchain_community.document_loaders import TextLoader

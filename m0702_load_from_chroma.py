@@ -1,3 +1,16 @@
+"""
+从 Chroma 加载向量库
+
+加载已持久化的 Chroma 向量数据库，用于后续检索。
+
+✅ 掌握点：
+- 通过根目录 embeddings.py 模块的 get_embeddings() 函数加载向量化模型。
+- 使用 Chroma(persist_directory="...") 从磁盘加载已保存的向量库。
+- 无需重新向量化，实现"离线索引"快速启动。
+- 获取 db.as_retriever() 作为后续 RAG 流程的输入。
+依赖前提：
+- 必须存在 chroma_db_war_and_peace_bge_small_en_v1.5 目录。
+"""
 from pathlib import Path
 import os
 

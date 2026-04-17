@@ -1,3 +1,13 @@
+"""
+流式输出实战
+
+实现 AI 回复像打字机一样逐字输出，提升用户体验。
+
+✅ 掌握点：
+- 设置 streaming=True 启用流式模式
+- 添加 callbacks=[StreamingStdOutCallbackHandler()] 实时打印 token
+- 使用 print("AI: ", end="", flush=True) 确保提示立即显示
+"""
 import os
 
 from dotenv import load_dotenv

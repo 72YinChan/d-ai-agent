@@ -1,3 +1,17 @@
+"""
+温度参数对输出的影响
+
+演示不同 temperature 参数对 LLM 输出多样性和创造性的影响。
+
+🔧 使用提示：
+想测试不同温度参数的效果？
+👉 直接修改代码中的 temperature 值即可（范围通常为 0-2）。
+
+✅ 掌握点：
+- temperature 参数的作用和影响
+- 如何根据场景选择合适的温度值
+- 低温度（稳定）与高温度（随机）输出的对比
+"""
 import os
 
 from dotenv import load_dotenv

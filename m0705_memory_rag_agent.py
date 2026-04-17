@@ -1,3 +1,21 @@
+"""
+终极集成 Agent
+
+首次融合 LangChain 六大核心模块，构建带记忆、能自主决策的智能体。
+
+✅ 掌握点：
+- 通过根目录 embeddings.py 模块的 get_embeddings() 函数加载向量化模型。
+- LLM：ChatOpenAI 作为推理引擎。
+- Prompt：含 MessagesPlaceholder("history") 的系统提示。
+- Chain：LCEL 构建的 RAG 链 + AgentExecutor。
+- Memory：RunnableWithMessageHistory 实现跨轮次上下文记忆。
+- Agents：create_tool_calling_agent 驱动 ReAct 循环。
+- RAG：以 search_war_and_peace 工具形式注入私有知识能力。
+效果：
+- Agent 可结合历史（如“他”指皮埃尔）精准调用 RAG，同时支持查天气等外部工具。
+依赖前提：
+- 必须存在 chroma_db_war_and_peace_bge_small_en_v1.5 目录。
+"""
 from pathlib import Path
 import os
 

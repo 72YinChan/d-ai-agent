@@ -1,3 +1,13 @@
+"""
+通用 Agent 构建
+
+基于 create_tool_calling_agent 创建支持工具调用的智能体。
+
+✅ 掌握点：
+- ReAct 思维循环：思考 → 行动 → 观察 → 再思考
+- 使用 MessagesPlaceholder("agent_scratchpad") 记录推理过程
+- AgentExecutor 执行完整流程，支持 verbose=True 查看思考链
+"""
 import os
 
 from dotenv import load_dotenv

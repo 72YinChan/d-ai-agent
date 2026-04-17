@@ -1,3 +1,13 @@
+"""
+文本加载与分块
+
+加载本地 .txt 文档，并使用 RecursiveCharacterTextSplitter 将其智能分割成“知识卡片”。
+
+✅ 掌握点：
+- 使用 TextLoader 将文件加载为 Document 对象。
+- RAG 核心：深入理解 chunk_size (分块大小) 和 chunk_overlap (重叠) 的调优策略。
+- RecursiveCharacterTextSplitter 如何按 ["\n\n", "\n", " "] 优先级智能分割。
+"""
 from pathlib import Path
 
 from langchain_community.document_loaders import TextLoader

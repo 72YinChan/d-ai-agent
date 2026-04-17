@@ -1,3 +1,13 @@
+"""
+向量存储与索引构建
+
+使用 FAISS 向量索引库将向量化后的文本片段构建为可检索的向量数据库，并持久化到本地。
+
+✅ 掌握点：
+- 使用 FAISS.from_documents 构建向量索引库。
+- 通过 save_local 方法将向量索引持久化到本地文件系统（保存为"faiss_index"目录）。
+- 实现文本的完整处理流程：加载 -> 分割 -> 向量化 -> 索引构建 -> 持久化。
+"""
 from pathlib import Path
 
 from langchain_community.document_loaders import TextLoader

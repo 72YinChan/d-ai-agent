@@ -1,3 +1,15 @@
+"""
+LCEL 完整 RAG 链
+
+使用 LCEL（LangChain 表达式语言）“手动组装”一个完整的 RAG 流程，实现“检索-增强-生成”的闭环。
+
+✅ 掌握点：
+- R (Retrieval): db.as_retriever() 如何作为检索器。
+- A (Augmented): ChatPromptTemplate 如何接收 {context} 和 {question}。
+- G (Generation): LLM 如何根据上下文（Context）回答问题。
+- LCEL 核心：使用 {"context": ..., "question": RunnablePassthrough()} 并行组装数据流。
+- 使用 format_docs 函数将 List[Document] 适配为 str 字符串。
+"""
 from pathlib import Path
 import os
 
