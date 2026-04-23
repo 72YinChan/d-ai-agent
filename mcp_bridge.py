@@ -1,3 +1,21 @@
+"""
+LangChain桥接器
+
+实现MCP工具到LangChain工具的自动转换，使MCP服务能够无缝集成到LangChain生态中。
+
+✅ 掌握点：
+- JSON Schema到Pydantic模型的动态转换
+- LangChain工具的创建与配置
+- 批量工具加载的实现
+- 异步上下文管理器的应用
+功能：
+- 将MCP工具转换为LangChain可用的工具
+- 动态生成Pydantic参数模型
+- 支持批量加载多个MCP服务的工具
+- 管理MCP客户端的生命周期
+
+💡 这是MCP与LangChain集成的关键组件，实现了两种生态系统之间的无缝对接。
+"""
 from typing import Dict, Any, List
 from contextlib import AsyncExitStack
 

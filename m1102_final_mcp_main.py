@@ -77,7 +77,8 @@ def build_graph(available_tools):
 
     llm_with_tools = llm.bind_tools(available_tools) if available_tools else llm
 
-    sys_prompt = "你是一个地理位置助手，请根据用户需求调用工具查询信息。"
+    # sys_prompt = "你是一个地理位置助手，请根据用户需求调用工具查询信息。"
+    sys_prompt = "你是一个天气助手，请根据用户需求调用工具查询信息。"
 
     async def agent_node(state: MessagesState):
         # 格式化消息，确保ToolMessage的content是字符串
